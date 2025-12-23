@@ -1,0 +1,74 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de sistema Windows
+AppData/
+NTUSER.DAT*
+ntuser.dat*
+*.ini
+
+# Archivos de configuración local
+.gitconfig
+.lesshst
+
+# Directorios del sistema
+Configuración local/
+Cookies/
+Datos de programa/
+Entorno de red/
+Impresoras/
+Menú Inicio/
+Mis documentos/
+Plantillas/
+Reciente/
+SendTo/
+
+# Archivos temporales y de usuario
+*.dbt
+*.cdp
+*.cdpresource
+
+# Otros directorios del sistema
+.antigravity/
+.businessobjects/
+.cursor/
+.dotnet/
+.gemini/
+.nuget/
+.templateengine/
+
+# Archivos de usuario
+Contacts/
+Documents/
+Downloads/
+Dropbox/
+Favorites/
+Links/
+Music/
+OneDrive/
+Saved Games/
+Searches/
+Videos/
+
+# Otros archivos del sistema
+advanced_ip_scanner_*.bin
+deteccion-epps-2.html
+Default.html
+
+# Directorios fuera del proyecto
+Nexwork-MK/
+Nexwork-peru.com/
+SUNAT/
+WebComponents/
+WebPlugins/
+

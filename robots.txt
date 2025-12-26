@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /vendor/
+Disallow: /mail/
+Disallow: /less/
+Disallow: /scss/
+Disallow: /js/jqBootstrapValidation.js
+Disallow: /js/contact_me.js
+
+# Sitemap
+Sitemap: https://rpvseguros.com/sitemap.xml
+

@@ -1,5 +1,42 @@
 /* Custom Styles for RPV Seguros */
 
+/* Botón Enviar verde en formularios de contacto - todas las páginas */
+#contactForm .btn-xl,
+section#contact .btn-xl,
+button[type="submit"].btn-xl {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: #fff !important;
+}
+
+#contactForm .btn-xl:hover,
+section#contact .btn-xl:hover,
+button[type="submit"].btn-xl:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+}
+
+/* Placeholders más oscuros (20% más oscuro) */
+.form-control::placeholder {
+    color: #666 !important;
+    opacity: 1 !important;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #666 !important;
+    opacity: 1 !important;
+}
+
+.form-control::-moz-placeholder {
+    color: #666 !important;
+    opacity: 1 !important;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #666 !important;
+    opacity: 1 !important;
+}
+
 /* Hero Section Styles for Index */
 header.primera .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -17,7 +54,7 @@ header.primera .hero-buttons .btn {
 }
 
 header.primera .hero-buttons .btn:hover {
-    background-color: #fec503 !important;
+    background-color: #218838 !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -54,7 +91,7 @@ header.primera .hero-buttons .btn:hover {
 }
 
 #modalCotizador .modal-header {
-    background-color: #fed136;
+    background-color: #28a745;
     border-radius: 8px 8px 0 0;
     padding: 20px 30px;
     border-bottom: none;
@@ -77,7 +114,7 @@ header.primera .hero-buttons .btn:hover {
 }
 
 #modalCotizador .nav-tabs {
-    border-bottom: 2px solid #fed136;
+    border-bottom: 2px solid #28a745;
     margin-bottom: 30px;
 }
 
@@ -93,17 +130,17 @@ header.primera .hero-buttons .btn:hover {
 
 #modalCotizador .nav-tabs > li > a:hover {
     background-color: #f7f7f7;
-    color: #fed136;
+    color: #28a745;
     border: none;
 }
 
 #modalCotizador .nav-tabs > li.active > a,
 #modalCotizador .nav-tabs > li.active > a:hover,
 #modalCotizador .nav-tabs > li.active > a:focus {
-    background-color: #fed136;
-    color: #333;
+    background-color: #28a745;
+    color: #fff !important;
     border: none;
-    border-bottom: 3px solid #fec503;
+    border-bottom: 3px solid #218838;
 }
 
 #modalCotizador .tab-content {
@@ -125,7 +162,7 @@ header.primera .hero-buttons .btn:hover {
 }
 
 #modalCotizador .form-control:focus {
-    border-color: #fed136;
+    border-color: #28a745;
     box-shadow: 0 0 0 0.2px rgba(254, 209, 54, 0.25);
 }
 
@@ -134,7 +171,7 @@ header.primera .hero-buttons .btn:hover {
 }
 
 #modalCotizador .btn-xl:hover {
-    background-color: #fec503 !important;
+    background-color: #218838 !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -156,7 +193,7 @@ header.primera .hero-buttons .btn:hover {
 
 /* Logo responsive */
 .cel {
-    width: 200px;
+    width: 170px;
     padding-left: 30px;
 }
 
@@ -250,7 +287,7 @@ header.primera ~ section#contact {
 /* Responsive breakpoints */
 @media (min-width: 480px) {
     .cel {
-        width: 300px;
+        width: 255px;
     }
     .ima {
         width: 100%;
@@ -259,7 +296,7 @@ header.primera ~ section#contact {
 
 @media (min-width: 768px) {
     .cel {
-        width: 300px;
+        width: 255px;
     }
     .ima {
         width: 100%;
@@ -268,7 +305,7 @@ header.primera ~ section#contact {
 
 @media (min-width: 1200px) {
     .cel {
-        width: 300px;
+        width: 255px;
     }
     .ima {
         width: 400px;
@@ -302,7 +339,7 @@ a:hover {
 }
 
 .fas:hover {
-    color: #fed136;
+    color: #28a745;
 }
 
 /* Header backgrounds */
@@ -318,6 +355,7 @@ header.cabez {
     text-align: center;
 }
 
+/* Header general - aplica a todas las páginas excepto index.html y auto.html */
 header.primera {
     background-color: #2d7a8c !important;
     background-image: none !important;
@@ -338,16 +376,44 @@ header.primera {
     justify-content: center !important;
 }
 
-/* Header específico para index.html - más altura y layout de dos columnas */
-body.index header.primera {
+/* Header específico para index.html - completamente independiente - mayor especificidad */
+body.index header.primera,
+body.index header.primera.primera {
     background-color: #2d7a8c !important;
     background-image: none !important;
-    min-height: 100vh !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    -o-background-size: cover !important;
+    text-align: center !important;
+    min-height: 90.25vh !important;
+    height: 90.25vh !important;
+    max-height: 90.25vh !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
     padding: 40px 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+body.index header.primera video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+body.index header.primera > div {
+    position: relative;
+    z-index: 1;
+    width: 100%;
 }
 
 body.index header.primera .container {
@@ -366,7 +432,7 @@ body.index header.primera .row {
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     max-width: 100%;
     width: 100%;
-    min-height: 550px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
 }
@@ -408,6 +474,29 @@ body.index header.primera .col-md-5 {
     flex: 0 0 33.333% !important;
 }
 
+/* Asegurar que el texto encima del formulario sea visible */
+body.index header.primera .col-md-5 {
+    overflow: visible !important;
+}
+
+body.index header.primera .col-md-5 > p {
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    margin-top: 0 !important;
+    line-height: 1.4 !important;
+    position: relative !important;
+    z-index: 10 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: normal !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
 body.index header.primera .col-md-7 {
     max-width: 66.667% !important;
     flex: 0 0 66.667% !important;
@@ -422,7 +511,7 @@ body.index header.primera .col-md-7 {
 }
 
 .cotizador-panel .nav-tabs {
-    border-bottom: 2px solid #fed136;
+    border-bottom: 2px solid #28a745;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: nowrap;
@@ -450,17 +539,85 @@ body.index header.primera .col-md-7 {
 
 .cotizador-panel .nav-tabs > li > a:hover {
     background-color: #f7f7f7;
-    color: #fed136;
+    color: #28a745;
     border: none;
 }
 
 .cotizador-panel .nav-tabs > li.active > a,
 .cotizador-panel .nav-tabs > li.active > a:hover,
 .cotizador-panel .nav-tabs > li.active > a:focus {
-    background-color: #fed136;
-    color: #333;
+    background-color: #28a745;
+    color: #fff !important;
     border: none;
-    border-bottom: 3px solid #fec503;
+    border-bottom: 3px solid #218838;
+}
+
+.cotizador-panel .nav-tabs > li.active > a i,
+.cotizador-panel .nav-tabs > li.active > a:hover i,
+.cotizador-panel .nav-tabs > li.active > a:focus i {
+    color: #fff !important;
+}
+
+#modalCotizador .nav-tabs > li.active > a i,
+#modalCotizador .nav-tabs > li.active > a:hover i,
+#modalCotizador .nav-tabs > li.active > a:focus i {
+    color: #fff !important;
+}
+
+/* Indicadores de paso activos con texto blanco */
+.step-indicator.active,
+.step-indicator.active[style*="background-color: #28a745"] {
+    color: #fff !important;
+}
+
+/* Franja de logos de aseguradoras - A todo el ancho, después del header verde */
+.aseguradoras-franja {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: #fff !important;
+    padding: 25px 0 !important;
+    margin: 0 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    overflow-x: auto !important;
+}
+
+.aseguradoras-franja > div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 100px !important;
+    padding: 0 20px !important;
+    min-width: fit-content !important;
+}
+
+.aseguradoras-franja img {
+    flex-shrink: 0 !important;
+    height: 45px !important;
+    width: auto !important;
+    max-width: 100px !important;
+    object-fit: contain !important;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+.aseguradoras-franja img:first-child {
+    margin-left: 0 !important;
+}
+
+.aseguradoras-franja img:last-child {
+    margin-right: 0 !important;
+}
+
+.aseguradoras-franja img {
+    transition: transform 0.3s ease;
+}
+
+.aseguradoras-franja img:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -545,10 +702,14 @@ header.primera .btn-contact-wrapper {
     }
 }
 
-/* Header específico para auto.html - altura reducida al 50% y imagen de auto */
+/* Header específico para auto.html - altura reducida al 50% y imagen de auto - NO aplica a index.html */
 header.primera.auto-header {
-    background-color: #2d7a8c !important;
-    background-image: none !important;
+    background-color: transparent !important;
+    background-image: url('../img/auto1.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
     min-height: 50vh !important;
     height: 50vh !important;
     max-height: 50vh !important;
@@ -556,6 +717,16 @@ header.primera.auto-header {
     display: flex !important;
     align-items: flex-start !important;
     justify-content: center !important;
+}
+
+/* Asegurar que index.html NO se vea afectado por auto-header */
+body.index header.primera.auto-header {
+    background-color: #2d7a8c !important;
+    background-image: none !important;
+    min-height: 90.25vh !important;
+    height: 90.25vh !important;
+    max-height: 90.25vh !important;
+    align-items: center !important;
 }
 
 header.primera.auto-header .intro-text {
@@ -566,6 +737,147 @@ header.primera.auto-header .intro-text {
 }
 
 header.primera.auto-header .textos {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Headers específicos para otras páginas - mismo formato que auto-header */
+header.primera.salud-header {
+    background-color: transparent !important;
+    background-image: url('../img/auto1.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 50vh !important;
+    height: 50vh !important;
+    max-height: 50vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+header.primera.salud-header .intro-text {
+    padding-top: 18vh !important;
+    padding-bottom: 20px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+header.primera.salud-header .textos {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+header.primera.hogar-header {
+    background-color: transparent !important;
+    background-image: url('../img/hogar1.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 50vh !important;
+    height: 50vh !important;
+    max-height: 50vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+header.primera.hogar-header .intro-text {
+    padding-top: 18vh !important;
+    padding-bottom: 20px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+header.primera.hogar-header .textos {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+header.primera.vida-header {
+    background-color: transparent !important;
+    background-image: url('../img/auto1.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 50vh !important;
+    height: 50vh !important;
+    max-height: 50vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+header.primera.vida-header .intro-text {
+    padding-top: 18vh !important;
+    padding-bottom: 20px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+header.primera.vida-header .textos {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+header.primera.nosotros-header {
+    background-color: transparent !important;
+    background-image: url('../img/nosot.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 50vh !important;
+    height: 50vh !important;
+    max-height: 50vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+header.primera.nosotros-header .intro-text {
+    padding-top: 18vh !important;
+    padding-bottom: 20px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+header.primera.nosotros-header .textos {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+header.primera.educacion-header {
+    background-color: transparent !important;
+    background-image: url('../img/auto1.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    min-height: 50vh !important;
+    height: 50vh !important;
+    max-height: 50vh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+}
+
+header.primera.educacion-header .intro-text {
+    padding-top: 18vh !important;
+    padding-bottom: 20px !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+}
+
+header.primera.educacion-header .textos {
     margin-top: 0 !important;
     margin-bottom: 10px !important;
 }
@@ -634,7 +946,7 @@ header.primera + section#nosotros {
 
 /* Dropdown styles */
 .dropbtn {
-    color: white;
+    color: #003366 !important;
     padding: 16px;
     font-size: 18px;
     border: none;
@@ -655,10 +967,41 @@ header.primera + section#nosotros {
     z-index: 1;
 }
 
+/* Submenús desplegables en blanco - Máxima especificidad para sobrescribir agency.css */
+.navbar-custom .nav li .dropdown-content a,
+.navbar-custom .navbar-nav li .dropdown-content a,
+.navbar-custom ul.menu li .dropdown-content a,
+.navbar-custom .dropdown .dropdown-content a,
+.navbar-custom .nav .dropdown .dropdown-content a,
+.navbar-custom .navbar-nav .dropdown .dropdown-content a,
+div.dropdown-content a,
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    display: block;
+    color: #ffffff !important;
+    padding: 12px 16px !important;
+    display: block !important;
+    text-decoration: none !important;
+}
+
+.navbar-custom .nav li .dropdown-content a:hover,
+.navbar-custom .nav li .dropdown-content a:focus,
+.navbar-custom .nav li .dropdown-content a:visited,
+.navbar-custom .nav li .dropdown-content a:active,
+.navbar-custom .navbar-nav li .dropdown-content a:hover,
+.navbar-custom .navbar-nav li .dropdown-content a:focus,
+.navbar-custom .navbar-nav li .dropdown-content a:visited,
+.navbar-custom .navbar-nav li .dropdown-content a:active,
+.navbar-custom ul.menu li .dropdown-content a:hover,
+.navbar-custom .dropdown .dropdown-content a:hover,
+.navbar-custom .nav .dropdown .dropdown-content a:hover,
+.navbar-custom .navbar-nav .dropdown .dropdown-content a:hover,
+div.dropdown-content a:hover,
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.dropdown-content a:visited,
+.dropdown-content a:active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    text-decoration: none !important;
 }
 
 .dropdown:hover .dropdown-content {
@@ -667,6 +1010,44 @@ header.primera + section#nosotros {
 
 .menu {
     font-size: 18px;
+}
+
+/* Color azul oscuro para los enlaces del menú principal (Seguro Personas, Seguro Empresas, Nosotros, Contacto) */
+/* Solo afectar enlaces que NO estén dentro de dropdown-content */
+.navbar-custom .nav li:not(.dropdown) > a,
+.navbar-custom .nav > li:not(.dropdown) > a,
+.navbar-custom .navbar-nav > li:not(.dropdown) > a,
+.navbar-custom .navbar-nav > li:not(.dropdown) > a.page-scroll,
+.navbar-custom ul.menu li:not(.dropdown) > a,
+.navbar-custom ul.menu li:not(.dropdown) > a.page-scroll {
+    color: #003366 !important;
+}
+
+.navbar-custom .nav li:not(.dropdown) > a:hover,
+.navbar-custom .nav li:not(.dropdown) > a:focus,
+.navbar-custom .navbar-nav > li:not(.dropdown) > a:hover,
+.navbar-custom .navbar-nav > li:not(.dropdown) > a:focus,
+.navbar-custom ul.menu li:not(.dropdown) > a:hover {
+    color: #007CDC !important;
+    outline: none;
+}
+
+/* Botones dropdown (Seguro Personas, Seguro Empresas) en azul oscuro */
+.navbar-custom .dropbtn,
+.navbar-custom .dropbtn:visited,
+.navbar-custom .nav .dropdown .dropbtn,
+.navbar-custom ul.menu .dropdown .dropbtn,
+.navbar-custom .navbar-nav .dropdown .dropbtn {
+    color: #003366 !important;
+}
+
+.navbar-custom .dropbtn:hover,
+.navbar-custom .dropbtn:focus,
+.navbar-custom .nav .dropdown .dropbtn:hover,
+.navbar-custom .nav .dropdown .dropbtn:focus,
+.navbar-custom ul.menu .dropdown .dropbtn:hover,
+.navbar-custom .navbar-nav .dropdown .dropbtn:hover {
+    color: #007CDC !important;
 }
 
 /* Utility classes for text alignment */
@@ -782,6 +1163,62 @@ header.primera + section#nosotros {
         bottom: 20px;
         right: 20px;
         font-size: 28px;
+    }
+}
+
+/* Navbar con fondo blanco */
+.navbar-custom {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0 !important;
+}
+
+.navbar-custom .nav li a {
+    color: #fff !important;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+    color: #007CDC !important;
+}
+
+.navbar-custom .navbar-toggle {
+    background-color: #007CDC !important;
+    border-color: #007CDC !important;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-custom {
+        background-color: #ffffff !important;
+        padding: 22.5px 0 !important;
+    }
+    
+    .navbar-custom.affix {
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 9px 0 !important;
+    }
+}
+
+/* Reducir altura del navbar - sobrescribir agency.css */
+.navbar.navbar-custom.navbar-fixed-top {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar.navbar-custom.navbar-fixed-top {
+        padding-top: 22.5px !important;
+        padding-bottom: 22.5px !important;
+    }
+    
+    .navbar.navbar-custom.navbar-fixed-top.affix {
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
     }
 }
 
